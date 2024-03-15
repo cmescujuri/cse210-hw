@@ -1,0 +1,52 @@
+user inputs -- typing enter/ or "quit"
+
+outputs -- scripture, reference, underscore letters (foreach)
+
+end -- blank scripture / type "quit"
+
+////////////////////////////////////////////////////////
+
+program
+    behavior
+    -quitInput(end)
+    -quitEnter
+
+Scripture
+    HideRandomWords(numberToHide : int) : void
+    GetDisplayText() : string
+    IsCompletelyHidden() : bool
+
+    _reference : Reference
+    _words : List<Word> 
+
+    constructor - set default from reference & words
+
+Word
+    Hide() : void
+    Show() : void
+    IsHidden() : bool
+    GetDisplayText() : string
+
+    _text : string
+    _isHidden : bool
+
+    constructor - set default, user set words
+        default - "Jesus wept." 
+
+Reference
+    GetDisplayText() : string
+
+    _book : string  
+    _chapter : int
+    _verse : int
+    _endVerse : int
+
+    constructors - set default, user set reference, user set reference w/ range
+        default - "John 11:35"
+
+(optional)scriptureGenerator()
+(optional)timedHiddenWords()
+(optional)timedClear()
+
+
+/////////////////////////////////////////////
